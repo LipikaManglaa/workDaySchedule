@@ -1,8 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
-
 // using day.js format todays date
 
 var currentDate = dayjs().format("dddd MMMM , YYYY");
@@ -15,15 +10,15 @@ var currentWholeTime = dayjs().format("hh:mm:ss a");
 $("#currentTime").text(currentWholeTime)
 
 var currentTime = dayjs().format("HH");
-console.log(currentTime)
+// console.log(currentTime)
 
 
 let obj = ["08Am", "09Am", "10Am", "11Am", "12Pm", "13Pm", "14Pm", "15Pm", "16Pm", "17Pm"]
 let data = "";
-
+let mainSectionArea;
 obj.forEach((v, i) => {
   let time = v.slice(0, -2)
-  console.log(time)
+  // console.log(time)
   let childMain = $("<div>").addClass(" row con-main")
 
 
@@ -54,7 +49,7 @@ obj.forEach((v, i) => {
   childMain.append(hourCreate, taskArea, btnSave, btnDelete);
 
 
-  let mainSectionArea = $(".working-schedule").append(childMain);
+   mainSectionArea = $(".working-schedule").append(childMain);
 
   if (currentTime == time) {
     taskArea.addClass("present");
@@ -67,22 +62,36 @@ obj.forEach((v, i) => {
 })
 
 var objcreate;
+let textValue,timeCreate
 $(".saveBtn").on("click", function () {
-  var da = ($(this).prev("textarea").val())
-  console.log(da)
-  var timec = ($(this).siblings("div").children().text())
-  console.log(timec)
-  objcreate = {
-    timec:da
+  textValue = ($(this).prev("textarea").val())
+  
+  timeCreate = ($(this).siblings("div").children().text())
+ 
+   objcreate = {
+    [timeCreate]:textValue
   }
 
   var getItemLocal = JSON.parse(localStorage.getItem("workSchedule")) ?? []
+
+
   var finalData = [...getItemLocal, objcreate]
+  // console.Log(finalData)
   localStorage.setItem("workSchedule", JSON.stringify(finalData))
-  console.log(getItemLocal)
+  
   $(this).prev("textarea").val("")
 })
 
+let taskData;
 
-
+function displayData(){
+  $("textarea").each(function () {
+    getItemLocal = JSON.parse(localStorage.getItem("workSchedule")) ?? [] 
+  
+    timeCreate = ($(this).siblings("div").children().text())
+    console.log(timeCreate)
+  })
+  
+}
+displayData()
 
