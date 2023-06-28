@@ -16,6 +16,7 @@ var currentTime = dayjs().format("HH");
 let obj = ["08Am", "09Am", "10Am", "11Am", "12Pm", "13Pm", "14Pm", "15Pm", "16Pm", "17Pm"]
 let data = "";
 let mainSectionArea;
+
 obj.forEach((v, i) => {
   let time = v.slice(0, -2)
   // console.log(time)
@@ -87,9 +88,9 @@ let taskData;
 function displayData(){
   $("textarea").each(function () {
     getItemLocal = JSON.parse(localStorage.getItem("workSchedule")) ?? [] 
-  
+    console.log(getItemLocal)
     timeCreate = ($(this).siblings("div").children().text())
-    console.log(timeCreate)
+    // console.log(timeCreate)
   })
   
 }
