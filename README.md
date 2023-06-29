@@ -52,7 +52,7 @@ To install this code, download the zip file, or use GitHub's guidelines to clone
 - When the user wants to delete data 
  -it can shows by Toast Plugin  ,data has been deleted
 
- ![](screenshot/Screenshot3png)
+ ![](screenshot/Screenshot3.png)
  
 
  ### This project has media Queries for:
