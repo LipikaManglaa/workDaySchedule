@@ -10,7 +10,7 @@ This is a Work Day Scheduler application using HTML, CSS, and Jquery. This appli
 
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
 
-* [GitHub Repository]()
+* [GitHub Repository](https://github.com/LipikaManglaa/workDaySchedule.git)
 * [Deployed GitHub IO]
 
 
