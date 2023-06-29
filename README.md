@@ -9,8 +9,8 @@ This is a Work Day Scheduler application using HTML, CSS, and Jquery. This appli
 :white_circle: Indicates that the time has passed
 
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
-https://github.com/LipikaManglaa/quiz.git
-* [GitHub Repository](https://github.com/LipikaManglaa/quiz.git)
+
+* [GitHub Repository]()
 * [Deployed GitHub IO]
 
 
