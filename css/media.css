@@ -1,0 +1,5 @@
+@media screen and (min-width: 200px) and (max-width:567px){
+.mobile-size{
+    font-size: 13px;
+}
+}
