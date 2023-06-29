@@ -12,7 +12,7 @@ This project has been deployed to GitHub Pages. To get this project up and runni
 
 * [GitHub Repository](https://github.com/LipikaManglaa/workDaySchedule.git)
 * [Deployed GitHub IO]
-
+https://lipikamanglaa.github.io/workDaySchedule/
 
 
 ### Prerequisites
